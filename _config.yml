@@ -8,7 +8,7 @@ description: >
   Junior Undergraduate Student
 baseurl: ""
 url: "https://nicoleyihan.github.io/"
-github_username:  pesoto
+github_username:  nicoleyihan
 disqus_baseurl: "https://nicoleyihan.github.io/"
 disqus_shortname: https://nicoleyihan.github.io
 permalink: :title
@@ -40,7 +40,7 @@ gems:
 social:
   - name: GitHub
     icon: github
-    username: pesoto
+    username: nicoleyihan
     url: https://github.com/nicoleyihan
     desc: Fork me on GitHub
     share: false
@@ -48,6 +48,6 @@ social:
   - name: LinkedIn
     icon: linkedin
     username: Yi Han
-    url: https://linkedin.com/pesoto
+    url: https://linkedin.com/yihan
     desc: Connect with me on LinkedIn
     share: true
