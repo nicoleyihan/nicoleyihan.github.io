@@ -1,65 +1,64 @@
 <footer class="site-footer">
+
   <div class="wrapper">
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <h4>CONTACT</h4>
-
-        <div class="social-links">
-          {% for contact in site.footer.contact %}
-            <div class="social-link contact-links">
-
-              {% assign contact_icon_path = "/assets/img/icons/" | append: contact.name | downcase | append: ".png" | absolute_url %}
-              <img
-                src="{{ contact_icon_path }}"
-                alt="{{ contact.name | downcase }}"
-              />
-              <a href="{{ contact.link }}" id="{{ contact.name | downcase }}-link">
-                {% if contact.value and contact.value != "" and contact.value != nil %}
-                  {{ contact.value }}
-                {% else %}
-                  {{ contact.name }}
-                {% endif %}
-              </a>
-            </div>
-
-          {% endfor %}
-        </div>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <h4>FOLLOW</h4>
-
-        <div class="social-links follow-links">
-          {% for follow in site.footer.follow %}
-            <div class="social-link">
-
-              {% assign follow_icon_path = "/assets/img/icons/" | append: follow.name | downcase | append: ".png" | absolute_url %}
-              <img
-                src="{{ follow_icon_path }}"
-                alt="{{ follow.name | downcase }}"
-              />
-              <a href="{{ follow.link }}">
-                {% if follow.value and follow.value != "" and follow.value != nil %}
-                  {{ follow.value }}
-                {% else %}
-                  {{ follow.name }}
-                {% endif %}
-              </a>
-            </div>
-
-          {% endfor %}
-        </div>
-      </div>
-
-      {% if site.footer.show_powered_by == true %}
-        <div class="footer-col footer-col-3 powered-by">
-          <p>
-            powered by <a href="https://github.com/eliottvincent/bay">Bay</a> | {{ 'now' | date: "%Y" }}
-          </p>
-        </div>
-      {% endif %}
+    <div class="site-navigation">
+      <p><a href="mailto:paul.soto@upf.edu"><i class="fa fa-envelope"></i> E-mail</a></p>
     </div>
+
+    <div class="site-contact">
+      <p><a href="https://www.github.com/pesoto"><i class="fa fa-github"></i> GitHub</a></p>
+    </div>
+
+    <div class="site-signature">
+      <p><a href="https://www.linkedin.com/pesoto"><i class="fa fa-linkedin-square"></i> LinkedIn</a></p>
+    </div>
+
   </div>
+
 </footer>
 
-{% include wechat-widget.html %}
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+<script id="dsq-count-scr" src="//iammichaelhudson.disqus.com/count.js" async></script>
+<script>
+
+$(document).ready(function() {
+
+  // Syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+  //Make sure all the post's links open in a new tab
+  jQuery('.post-content a, .post-excerpt a').not('.footnote, .reversefootnote').attr ('target', '_blank');
+
+});
+
+</script>
+
+{% if site.ga_tracking_id and site.github %}
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', '{{ site.ga_tracking_id }}', 'auto');
+  ga('send', 'pageview', {
+    'page': '{{ page.url }}',
+    'title': '{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}'
+  });
+</script>
+{% endif %}

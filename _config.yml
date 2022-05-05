@@ -1,64 +1,53 @@
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-title: Yi Han
-description: >- # this means to ignore newlines until "baseurl:"
-  Bay is a minimal Jekyll Theme.
-baseurl: "/bay" # the subpath of the site
-url: "https://nicoleyihan.github.io" # the base hostname & protocol for the site
-og_image: /assets/img/profile-pic.jpg
-google_analytics: "UA-121636368-3"
-
-header:
-  pages:
-    - name: Home
-      slug: /
-    - name: Work
-    - name: Blog
-
-footer:
-  show_powered_by: true
-  contact:
-    - name: Email
-      value: nicole.yi.han@gmail.com
-      link: mailto:nicole.yi.han@gmail.com
-    - name: WeChat
-      value: hanyisisi
-      link: "#"
-  follow:
-    - name: Twitter
-      link: http://twitter.com/YourTwitterUsername
-      username: "@YourTwitterUsername"
-    - name: Facebook
-      link: http://facebook.com/YourFacebookUsername
-    - name: LinkedIn
-      link: http://linkedin.com/in/YourLinkedInUsername
-    - name: GitHub
-      link: http://github.com/YourGitHubUsername
-    - name: Dribbble
-      link: https://dribbble.com/YourDribbbleUsername
-    - name: RSS
-      link: /feed.xml
+# Site settings
+title: Paul E. Soto
+name: Paul E. Soto
+subtitle: Financial Economist
+email: paul.soto@upf.edu
+description: >
+  Financial Economist
+baseurl: ""
+url: "https://pesoto.github.io/"
+github_username:  pesoto
+disqus_baseurl: "https://pesoto.github.io/"
+disqus_shortname: https-pesoto-github-io
+permalink: :title
+google-site-verification: "EBNpnv4GiHJTmePgRajamxrYtJnc6WlqDyWUITDaSMo"
 
 # Build settings
 markdown: kramdown
-sass:
-    style: :compressed
-plugins:
-  - jekyll-feed
+paginate: 5
+paginate_path: "/page:num/"
+inter_post_navigation: true
 
-# Excluded items
-exclude:
-  - .sass-cache/
-  - .jekyll-cache/
-  - feed.xml
-  - gemfiles/
-  - Gemfile
-  - Gemfile.lock
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      author: "Paul E. Soto"
 
-# Used for defeating caching
-version: 1
+
+
+# External gems
+gems:
+  - jekyll-paginate
+  - jemoji
+  - jekyll-seo-tag
+
+
+
+social:
+  - name: GitHub
+    icon: github
+    username: pesoto
+    url: https://github.com/pesoto
+    desc: Fork me on GitHub
+    share: false
+
+  - name: LinkedIn
+    icon: linkedin
+    username: Paul E. Soto
+    url: https://linkedin.com/pesoto
+    desc: Connect with me on LinkedIn
+    share: true

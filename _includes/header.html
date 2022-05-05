@@ -1,25 +1,15 @@
-<header class="site-header">
-  <div class="wrapper">
-    <a class="site-title" href="{{ "" | prepend: site.baseurl | prepend: site.url }}/">
-      <img src="{{ "/assets/img/title.png" | absolute_url }}" alt="{{ site.title }}" />
+<header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
     </a>
-
-    <nav class="site-nav">
-      <a href="#" class="menu-icon"></a>
-
-      <div class="menu">
-        {% for page in site.header.pages %}
-          {% if page.slug and page.slug != "" and page.slug != nil %}
-            {% assign page_link = page.slug %}
-          {% else %}
-            {% assign page_link = "/" | append: page.name | downcase %}
-          {% endif %}
-          {% assign page_link = page_link | absolute_url %}
-          <a class="page-link" href="{{ page_link }}">
-            {{ page.name }}
-          </a>
-        {% endfor %}
-      </div>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+      <li class="nav-link"><a href="{{ site.baseurl }}/" class="logo"><strong>Home</strong></a>
+      <li class="nav-link"><a href="https://pesoto.github.io/research"><strong>Research</strong></a>
+      <li class="nav-link"><a href="https://pesoto.github.io/about"><strong>About Me</strong></a>
+      <li class="nav-link"><a href="https://pesoto.github.io/tutorials"><strong>Tutorials</strong></a>
+      </ul>
     </nav>
   </div>
 </header>
