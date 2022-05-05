@@ -1,16 +1,16 @@
 
 # Site settings
-title: Paul E. Soto
-name: Paul E. Soto
-subtitle: Financial Economist
-email: paul.soto@upf.edu
+title: Yi Han
+name: Yi Han
+subtitle: Junior Undergraduate Student
+email: yh726@cornell.edu
 description: >
-  Financial Economist
+  Junior Undergraduate Student
 baseurl: ""
-url: "https://pesoto.github.io/"
+url: "https://nicoleyihan.github.io/"
 github_username:  pesoto
-disqus_baseurl: "https://pesoto.github.io/"
-disqus_shortname: https-pesoto-github-io
+disqus_baseurl: "https://nicoleyihan.github.io/"
+disqus_shortname: https://nicoleyihan.github.io
 permalink: :title
 google-site-verification: "EBNpnv4GiHJTmePgRajamxrYtJnc6WlqDyWUITDaSMo"
 
@@ -25,7 +25,7 @@ defaults:
     scope:
       path: ""
     values:
-      author: "Paul E. Soto"
+      author: "Yi Han"
 
 
 
@@ -41,13 +41,13 @@ social:
   - name: GitHub
     icon: github
     username: pesoto
-    url: https://github.com/pesoto
+    url: https://github.com/nicoleyihan
     desc: Fork me on GitHub
     share: false
 
   - name: LinkedIn
     icon: linkedin
-    username: Paul E. Soto
+    username: Yi Han
     url: https://linkedin.com/pesoto
     desc: Connect with me on LinkedIn
     share: true
